@@ -8,7 +8,7 @@ public class RubyController : MonoBehaviour
     // 当游戏开始时，Unity只在start中执行一次代码，且在第一帧更新前调用
     void Start()
     {
-        // Application.targetFrameRate = 10; // 固定每秒10帧，影响到update方法的调用次数
+        // Application.targetFrameRate = 60; // 固定每秒10帧，影响到update方法的调用次数
     }
     
     // Update is called once per frame
@@ -21,7 +21,8 @@ public class RubyController : MonoBehaviour
         Vector2 position = transform.position;
         //position.x = position.x + 0.1f * horizontal*Time.deltaTime; // 按照每秒0.1m速度移动 Time.daltaTiem限制
         //position.y = position.y + 0.1f * vertical;// 每帧0.1m，1秒60帧，按照每秒6m速度移动
-        position.x = position.x + 0.02f * horizontal;
+        position.x = position.x + 1.2f * horizontal * Time.deltaTime;
+        //position.x = position.x + 0.02f * horizontal;
         position.y = position.y + 0.02f * vertical;
         transform.position = position;
     }
