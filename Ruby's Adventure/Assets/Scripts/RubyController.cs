@@ -21,9 +21,8 @@ public class RubyController : MonoBehaviour
         Vector2 position = transform.position;
         //position.x = position.x + 0.1f * horizontal*Time.deltaTime; // 按照每秒0.1m速度移动 Time.daltaTiem限制
         //position.y = position.y + 0.1f * vertical;// 每帧0.1m，1秒60帧，按照每秒6m速度移动
-        position.x = position.x + 1.2f * horizontal * Time.deltaTime;
-        //position.x = position.x + 0.02f * horizontal;
-        position.y = position.y + 0.02f * vertical;
+        position.x = position.x + 0.025f * horizontal;
+        position.y = position.y + 0.025f * vertical;
         transform.position = position;
     }
 }
